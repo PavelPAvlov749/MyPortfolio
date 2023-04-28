@@ -1,0 +1,27 @@
+@font-face {
+    font-family:"fonts";
+    src: url(./Fonts/clacon2.ttf);
+    font-style: normal;
+
+}
+@font-face {
+    font-family: "ostrich";
+    src: url(./Fonts/ostrich-regular.ttf);
+}
+
+@font-face {
+    font-family: "josephin";
+    src: url(./Fonts/JosefinSans-Bold.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+canvas {
+    grid-area: canvas;
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+

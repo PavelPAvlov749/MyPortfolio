@@ -1,0 +1,155 @@
+// Global CSS variables
+@border : 1px solid lightgrey;
+@borderRadius : 5px;
+@buttonHeight : 40px;
+@buttonHoverBorder : 1px solid aqua;
+body {
+    margin: 0%;
+    padding: 0%;
+    color: white;
+    background-color: black;
+   
+    ul {
+        padding: 0% 10px;
+        margin: 0%;
+    }
+    li {
+        list-style: none;
+        margin: 0%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+}
+
+.top_control_buttons {
+    padding: 20px 50px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 3rem;
+    line-height: 3rem;
+    vertical-align: middle;
+    justify-content: space-between;
+
+    .name_logo {
+        border-radius: 3px;
+        border: 2px solid white;
+        height: @buttonHeight;
+        width: 100px;
+        text-align: center;
+        line-height: 40px;
+        vertical-align: middle;
+        font-family: josephin;
+
+    }
+
+    img {
+        padding: 5px;
+        border-radius: @borderRadius;
+        border: @border;
+        width: 30px;
+        height: 30px;
+        margin-right: 20%;
+    }
+
+    button {
+        height: 40px;
+        width: 80px;
+        font-size: medium;
+        font-weight: 300;
+        color: white;
+        background-color: black;
+        border: @border;
+        border-radius: @borderRadius;
+    }
+    button:hover{
+        border: @buttonHoverBorder;
+        border-radius: @borderRadius;
+    }
+    .language_switcher {
+        border-radius: @borderRadius;
+        border: @border;
+        width: 30px;
+        text-align: center;
+        height: 30px;
+        padding: 5px;
+        line-height: 30px;
+        vertical-align: middle;
+    }
+    
+}
+
+.main_page {
+    display: grid;
+    grid-template-columns: 1.5fr 8.5fr;
+    grid-template-areas: "navbar welcome";
+    width: 100%;
+    height: 100vh;
+   
+
+    .navbar {
+        grid-area: navbar;
+        display: flex;
+        height: 100vh;
+        padding-left: 25px;
+        ul{
+            height: 85%;
+            padding: 0% 25px;
+            display: flex;
+            justify-content:center;
+            flex-direction: column;
+        }
+        li {
+            
+            padding: 15px 0%;
+            font-family: fonts;
+            font-size: larger;
+        }
+        li:hover {
+            color : orange;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color:orange;
+        }
+    }
+    .welcome{
+        grid-area: welcome;
+        display: flex;
+        flex-direction: column;
+        vertical-align: middle;
+        height: 100vh;
+        padding-top: 5%;
+        h1{
+            font-size: 60px;
+        }
+        span {
+            font-family: ostrich;
+            font-size: 40px;
+        }
+        p {
+            width: 50%;
+            font-size: large;
+        }
+        a {
+            cursor: pointer;
+            font-size: xx-large;
+            font-family: josephin;
+            color: orange;
+        }
+        a:hover{
+            color: orange;
+
+        }
+        
+    }
+}
+
