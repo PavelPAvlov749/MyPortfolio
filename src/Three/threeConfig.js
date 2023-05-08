@@ -6,8 +6,12 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 
 import { RGBShiftShader } from 'three/addons/shaders/RGBShiftShader.js';
 import { DotScreenShader } from 'three/addons/shaders/DotScreenShader.js';
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-
+import planet from "./earth.glb"
+import model from "./scene.gltf"
+import "./PlanetScene"
+console.log(model)
 //CONFIG WEB GL RENDERER
 export const renderer = new THREE.WebGL1Renderer()
 renderer.setClearColor(0x000000, 10)
@@ -54,3 +58,15 @@ composer.addPass(effect2);
 
 
 
+const loader = new GLTFLoader();
+console.log(loader)
+
+loader.load( planet, function ( gltf ) {
+	console.log(gltf)
+	scene.add( gltf.scene );
+
+}, undefined, function ( error ) {
+
+	console.error( error );
+
+} );

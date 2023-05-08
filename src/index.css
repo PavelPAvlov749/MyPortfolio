@@ -13,7 +13,10 @@
     font-family: "josephin";
     src: url(./Fonts/JosefinSans-Bold.ttf);
 }
-
+@font-face {
+    font-family: "bebas";
+    src: url("./Fonts/BebasNeue-Regular.ttf");
+}
 html{
     scroll-behavior: smooth;
 }
@@ -25,3 +28,8 @@ canvas {
     right: 0%;
 }
 
+.App{
+    display: grid;
+    grid-template-columns: 1.8fr 8.5fr;
+    grid-template-areas: "navbar content";
+}

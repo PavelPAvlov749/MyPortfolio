@@ -7,13 +7,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 
 //BABEL 
-require("@babel/core").transformSync("code", {
-    presets: ["@babel/preset-typescript"],
-    filename: 'script.ts',
-  });
-  require("@babel/core").transformSync("code", {
-    presets: ["@babel/preset-react"],
-  });
 
 // Check if dev mode active
 const isDevMode = process.env.NODE_ENV === "development"
@@ -37,8 +30,11 @@ const optimization = () => {
 module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
-    entry: ["./index.js","./Components/About.jsx"],
+    entry: ["./index.jsx",],
     optimization : optimization(),
+    resolve : {
+        extensions : ['.ts,','.js','.tsx','.jsx']
+    },
     plugins: [
         new HTMLWebpackPlugin({
             template: "./index.html",
@@ -60,13 +56,14 @@ module.exports = {
         })
       
     ],
+    devtool : "inline-source-map",
     output : {
         filename : "bundle.js",
         path : path.resolve(__dirname,"dist")
     },
     devServer : {
         port : 8080,
-        hot : isDevMode
+        hot : true
     },
     module: {
         rules: [
@@ -83,7 +80,7 @@ module.exports = {
                 },'css-loader','less-loader']
             },
             {
-                test : /\.(jpg|png|gif|svg)$/i,
+                test : /\.(jpg|png|gif|svg|jpeg)$/i,
                 use : [
                     {
                         loader : "file-loader"
@@ -91,16 +88,26 @@ module.exports = {
                 ]
             },
             {
-                test : /\.(jsx)$/i,
+                test : /\.(jsx|js)$/i,
+                exclude : /node_modules/,
                 use : {
                     loader : "babel-loader",
                     options : {
-                        presets : ['@babel/preset-react']
+                        presets : ["@babel/preset-react"]
                     }
                 }
+            },
+            {
+                test: /\.mp3$/,
+                loader: 'file-loader'
+            },
+            {
+                test : /\.(gltf|glt|bin|glb)$/,
+                use : "file-loader",
+                
             }
-          
-        ]
+    ]
     }
+    
 
 }

@@ -5,48 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=12a5c589-445c-43f8-a5ef-f3050bf426d0&lang=ru_RU"
+        type="text/javascript">
+        </script> -->
+    <!-- <script type="text/javascript">
+        ymaps.ready(init);
+        function init() {
+            // Создание карты.
+            var myMap = new ymaps.Map("map", {
+                // Координаты центра карты.
+                // Порядок по умолчанию: «широта, долгота».
+                // Чтобы не определять координаты центра карты вручную,
+                // воспользуйтесь инструментом Определение координат.
+                center: [55.00, 73.30],
+                controls:[],
+                // Уровень масштабирования. Допустимые значения:
+                // от 0 (весь мир) до 19.
+                zoom: 12
+            });
+        }
+    </script> -->
     <title>Document</title>
 </head>
 
 <body>
-    <section class="top_control_buttons">
-        <div class="name_logo">
-            PVLV_DEV:
-        </div>
-        <!-- <audio src="../sound.mp3" autoplay="off" class="sound"></audio> -->
-        <img src="./Assets/Icons/volume.png" class="sound_button" alt="">
-
-        <div class="language_switcher">en</div>
-              
-        <button class="resume_button">
-            Resume
-        </button>
-    </section>
-    <section class="main_page">
-        <section class="navbar">
-            <ul>
-                <li><a href="#about_me">01.About</a></li>
-                <li><a href="#">02.Stack</a></li>
-                <li><a href="">03.Projects</a></li>
-                <li><a href="">04.Contacts</a></li>
-                
-            </ul>
-        </section>
-        <section class="welcome">
-            <h1>Welcome</h1>
-            <span>Hello! My name is Pavel</span><br />
-            <p>
-                Resolving design problems, building smart user interfaces and useful interactions,
-                developing rich web applications and seamless web experiences.
-            </p>
-            <a href="#about" class="aboutButton">About ></a>
-        </section>
-    
-    </section>
-    <section class="about_me_container" id="about_me">
-        <h1>About.</h1>
-        
-    </section>
+    <div id="mainPage">
+    </div>
+    <div id="planet"></div>
 </body>
 
 </html>

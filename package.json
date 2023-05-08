@@ -11,8 +11,12 @@
   "author": "PAvlov",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.21.5",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.21.5",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.4",
+    "babel-loader": "^9.1.2",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^5.0.0",
@@ -27,8 +31,10 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "seinjs-gltf-loader": "^0.9.28",
     "three": "^0.151.3"
   }
 }
