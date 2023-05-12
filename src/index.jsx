@@ -15,6 +15,10 @@ import { Contacts } from "./Components/Contacts";
 // sound_btn.setAttribute("src",soundIcon)
 
 
+
+
+
+
 for (let i = 0; i < 10; i++) {
 
     let size = Math.random() * 100
@@ -103,40 +107,38 @@ root.render(
 )
 
 
+//PLANET SCEENE
+//CREATE DOM NODE AND APPEND IT ONTO DOM
+const planetSeneDOMElement = document.createElement("canvas")
+planetSeneDOMElement.id = "planetDomElement"
+planetSeneDOMElement.className = "planetDomElement"
 
-//CRETING A PLANET SCENE IN CONTACTS COMPONENT
-
-const loader = new GLTFLoader();
-
-const planetRenderer = new THREE.WebGL1Renderer()
-const planetCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000)
-const planetLight = new THREE.DirectionalLight(0xf08080, 1)
-const planetCcene = new THREE.Scene()
-planetCcene.add(new THREE.AmbientLight(0x222222,1))
-planetCcene.add(planetLight)
-
-const planetControls = new OrbitControls(planetCamera, planetRenderer.domElement);
+const planetSceneContainer = document.getElementById("planetContainer")
 
 
+//CREATE PLANET RENDERER
+const planerRenderer = new THREE.WebGL1Renderer({planetSeneDOMElement,alpha : true})
+// planetSceneContainer.appendChild(planerRenderer.domElement)
+const planetScene = new THREE.Scene()
+const planetCamera = new THREE.PerspectiveCamera(75,window.innerWidth / innerHeight,0.1,3000)
+const planetSceneDirectionalLight = new THREE.DirectionalLight(0xfffff,1)
+
+planetScene.add(planetSceneDirectionalLight)
+
+const loader = new GLTFLoader()
+
+loader.load(model,(gltf) => {
+    console.log(gltf)
+    planetScene.add(gltf.scene)
+},(xhr) => {
+    console.log("Laded : " + xhr.loaded)
+},(error) => {
+    console.error(error)
+})
 
 
-loader.load( model, function ( gltf ) {
-	console.log(gltf)
-	planetCcene.add( gltf.scene );
-    
-
-}, undefined, function ( error ) {
-
-	console.error( error );
-
-} );
-
-
-const Container = document.getElementById("planet")
-Container.appendChild(renderer.domElement)
-
-
-const AnimatePlanet = () => {
-    requestAnimationFrame(AnimatePlanet)
-    renderer.render()
+function animatePlanet  () {
+    requestAnimationFrame(animatePlanet)
+    planerRenderer.render(planetScene,planetCamera)
 }
+

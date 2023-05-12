@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import "../Styles/Projects.less"
-import phone from "../Assets/phone.png"
+import phone from "../Assets/project.png"
+import gitIcon from "../Assets/Icons/icons8-github-100.png"
 
 export const Projects = () => {
     const projects = [{
@@ -30,9 +31,10 @@ export const Projects = () => {
                                     Graduation project for the course "ReactJS the Way of Samurai".
                                     Implemented in React, Redux, Typescript and Google Cloud Platform as server solution.
                                 </p>
+                                <img src={gitIcon} className="gitIcon" alt="" /><a href="">GitHub</a>
                             </section>
                             <div className="images">
-
+                                <img src={phone} alt="" />
                             </div>
                         </div>
                         <div className="two">
@@ -46,9 +48,11 @@ export const Projects = () => {
                                     Train employees, facilitate work with technological maps.
                                 </p>
                             </section>
-
+                            <div className="images">
+                                <img src={phone} alt="" />
+                            </div>
                         </div>
-                        <div className="three"></div>
+                      
                     </div>
 
                 </div>

@@ -103,7 +103,7 @@ module.exports = {
             },
             {
                 test : /\.(gltf|glt|bin|glb)$/,
-                use : "file-loader",
+                type : "asset/resource"
                 
             }
     ]
