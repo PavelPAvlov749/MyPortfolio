@@ -27,6 +27,7 @@ export const MainPage = () => {
         setAutoplay(prev => !prev)
 
     }
+
     return (
         <>
             <section class="top_control_buttons">
@@ -53,7 +54,7 @@ export const MainPage = () => {
                     </p>
                     <a href="#about" class="aboutButton">{"About >"}</a>
                 </section>
-
+        
             </section>
         </>
     )

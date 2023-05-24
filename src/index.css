@@ -31,6 +31,7 @@ canvas {
 .App{
     display: grid;
     grid-template-columns: 1.8fr 8.5fr;
-    grid-template-areas: "navbar content";
+    grid-template-areas: 
+    "navbar content";
 }
 

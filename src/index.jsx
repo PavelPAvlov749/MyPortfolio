@@ -11,9 +11,6 @@ import { App } from "./App";
 import model from "./Three/earth.glb"
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { Contacts } from "./Components/Contacts";
-// let sound_btn = document.querySelector(".sound_button")
-// sound_btn.setAttribute("src",soundIcon)
-
 
 
 
@@ -95,7 +92,22 @@ export function AnimateGeometryParticles() {
 
 AnimateGeometryParticles()
 // Apend 3D SCENE to the DOM
-document.body.appendChild(renderer.domElement);
+let sceneContainer = document.getElementById("mainPage")
+// sceneContainer.appendChild(renderer.domElement)
+const body = document.body
+body.appendChild(renderer.domElement);
+
+// RESIZE FUNCTION 
+function onWindowResize() {
+
+    camera.aspect = body.clientWidth / body.clientHeight;
+
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(body.clientWidth, body.clientHeight);
+}
+
+// window.addEventListener("resize",onWindowResize)
 
 const root = ReactDOM.createRoot(
     document.getElementById('mainPage')

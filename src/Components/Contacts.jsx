@@ -1,12 +1,13 @@
 import React from "react"
-import { YMap } from "./Map"
+import { YMap } from "./Map"    
 import phoneIcon from "../Assets/Icons/icons8-phone-100.png"
 import linkedin from "../Assets/Icons/icons8-linkedin-150.png"
 import instagram from "../Assets/Icons/icons8-instagram-150.png"
 import mailIcon from "../Assets/Icons/icons8-mail-100.png"
 import telegram from "../Assets/Icons/icons8-telegram-150.png"
 import "../Three/PlanetScene"
-
+import "../Styles/Contacts.less"
+import planet from "../Assets/planet.gif"
 
 export const Contacts = () => {
     return (
@@ -15,6 +16,7 @@ export const Contacts = () => {
             <section className="contacts">
             <h1>Contacts : </h1>
             <h2>Russian Federation,Omsk</h2>
+            <div className="contact_list">
             <img src={phoneIcon} alt="" />
             <span>Tel : +79658751073</span>
             <br />
@@ -26,7 +28,12 @@ export const Contacts = () => {
             <br />
             <img src={linkedin} alt="" />
             <span>LinkedIn : #</span>
+            </div>
+
             </section>
+            <div className="planet">
+                <img src={planet} alt="" />
+            </div>
             {/* <YMap/> */}
 
         </div>

@@ -2,8 +2,75 @@
 @borderRadius : 5px;
 @buttonHeight : 40px;
 
-.about_me_container {
-    background-color: rgb(23, 23, 23);
-    height: 100vh;
-    width: 100%;
+.about_container{
+
+    // width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    justify-content: flex-start;
+    background-color: black;
+    height: calc(100vh);
+    color: white;
+    padding: 10px;
+    
+    .short_description{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        justify-content: center;
+        width: 50%;
+        padding: 10px;
+        height: 100%;
+        h1{
+            display: inline-block;
+            font-size: 50px;
+            font-family: bebas;
+        }
+        span{
+            font-size: medium;
+            color: white;
+            height: 15px;
+    
+        }
+    }
+    .full_description{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        height: 100%;
+        
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        p{
+            // height: 100%;
+            // align-self: center;
+            word-wrap: break-word;
+            word-break: break-all;
+            overflow-x: hidden;
+            padding: 10px;
+        }
+        img{
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            margin: 5px 15px 5px 0px;
+            display: inline;
+        }
+        a{
+            text-decoration: none;
+            color: orange;
+            line-height: 40px;
+            vertical-align: middle;
+        }
+    }
+
+}
+
+@media(max-width:650px){
+    .about_container{
+        flex-direction: column;
+    }
 }

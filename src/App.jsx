@@ -4,17 +4,19 @@ import { AboutPage } from "./Components/AboutPage";
 import { Stack } from "./Components/Stack";
 import { Projects } from "./Components/Projects";
 import { Contacts } from "./Components/Contacts";
+import { Controls } from "./Components/Controls";
 
 
 export const App = () => {
     return (
-        <div className="App"> 
+        <div className="App">
+            {/* <Controls/> */}
             <Navbar/>
             <div className="content">
             <MainPage></MainPage>
             <AboutPage/>
             <Stack/>
-            <Projects/>
+            <Projects/> 
             <Contacts/>
             </div>
         

@@ -19,8 +19,8 @@ export const AboutPage = () => {
 
                     Interested in the entire frontend spectrum and working on ambitious projects with interesting people.
                 </p>
-                <img src={gitHubIcon} alt="" />
-                <a href="https://github.com/PavelPAvlov749?tab=repositories">{"To my github >"}</a>
+                {/* <img src={gitHubIcon} alt="" />
+                <a href="https://github.com/PavelPAvlov749?tab=repositories">{"To my github >"}</a> */}
             </div>
 
         </div>
