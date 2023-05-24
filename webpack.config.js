@@ -29,7 +29,7 @@ const optimization = () => {
 
 module.exports = {
     context: path.resolve(__dirname, "src"),
-    mode: "development",
+    mode: "production",
     entry: ["./index.jsx",],
     optimization : optimization(),
     resolve : {
@@ -50,7 +50,7 @@ module.exports = {
             patterns : [
                 {
                     from : path.resolve(__dirname,"./src/Assets/Icons"),
-                    to : path.resolve(__dirname,"dist")
+                    to : path.resolve(__dirname,"build")
                 }
             ]
         })
@@ -59,7 +59,7 @@ module.exports = {
     devtool : "inline-source-map",
     output : {
         filename : "bundle.js",
-        path : path.resolve(__dirname,"dist")
+        path : path.resolve(__dirname,"build")
     },
     devServer : {
         port : 8080,

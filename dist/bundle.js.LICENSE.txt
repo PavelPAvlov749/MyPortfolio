@@ -1,63 +1,35 @@
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
+/**
+ * @license
+ * Copyright 2010-2023 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
 
-/*!*******************!*\
-  !*** ./index.css ***!
-  \*******************/
+/**
+ * @license React
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
-/*!*********************!*\
-  !*** ./styles.less ***!
-  \*********************/
+/**
+ * @license React
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
-/*!***************************!*\
-  !*** ./Three/Geomerty.js ***!
-  \***************************/
-
-/*!******************************!*\
-  !*** ./Three/threeConfig.js ***!
-  \******************************/
-
-/*!********************************!*\
-  !*** ./Three/CreateFigures.js ***!
-  \********************************/
-
-/*!***************************************************!*\
-  !*** ../node_modules/three/build/three.module.js ***!
-  \***************************************************/
-
-/*!****************************************************************!*\
-  !*** ../node_modules/three/examples/jsm/shaders/CopyShader.js ***!
-  \****************************************************************/
-
-/*!*****************************************************************!*\
-  !*** ../node_modules/three/examples/jsm/postprocessing/Pass.js ***!
-  \*****************************************************************/
-
-/*!********************************************************************!*\
-  !*** ../node_modules/three/examples/jsm/controls/OrbitControls.js ***!
-  \********************************************************************/
-
-/*!********************************************************************!*\
-  !*** ../node_modules/three/examples/jsm/shaders/RGBShiftShader.js ***!
-  \********************************************************************/
-
-/*!*********************************************************************!*\
-  !*** ../node_modules/three/examples/jsm/postprocessing/MaskPass.js ***!
-  \*********************************************************************/
-
-/*!*********************************************************************!*\
-  !*** ../node_modules/three/examples/jsm/shaders/DotScreenShader.js ***!
-  \*********************************************************************/
-
-/*!***********************************************************************!*\
-  !*** ../node_modules/three/examples/jsm/postprocessing/RenderPass.js ***!
-  \***********************************************************************/
-
-/*!***********************************************************************!*\
-  !*** ../node_modules/three/examples/jsm/postprocessing/ShaderPass.js ***!
-  \***********************************************************************/
-
-/*!***************************************************************************!*\
-  !*** ../node_modules/three/examples/jsm/postprocessing/EffectComposer.js ***!
-  \***************************************************************************/
+/**
+ * @license React
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */

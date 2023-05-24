@@ -10,7 +10,8 @@ import { Controls } from "./Components/Controls";
 export const App = () => {
     return (
         <div className="App">
-            {/* <Controls/> */}
+            <HashRouter>
+                    {/* <Controls/> */}
             <Navbar/>
             <div className="content">
             <MainPage></MainPage>
@@ -19,6 +20,9 @@ export const App = () => {
             <Projects/> 
             <Contacts/>
             </div>
+            </HashRouter>
+        
+         
         
        
         </div>
