@@ -51,6 +51,10 @@ module.exports = {
                 {
                     from : path.resolve(__dirname,"./src/Assets/Icons"),
                     to : path.resolve(__dirname,"build")
+                },
+                {
+                    from : path.resolve(__dirname,"./src/Assets"),
+                    to : path.resolve(__dirname,"build")
                 }
             ]
         })
@@ -81,11 +85,7 @@ module.exports = {
             },
             {
                 test : /\.(jpg|png|gif|svg|jpeg)$/i,
-                use : [
-                    {
-                        loader : "file-loader"
-                    }
-                ]
+                type : "asset/resource"
             },
             {
                 test : /\.(jsx|js)$/i,

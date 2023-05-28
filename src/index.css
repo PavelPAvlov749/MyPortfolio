@@ -35,3 +35,13 @@ canvas {
     "navbar content";
 }
 
+
+@media (max-width : 706px) {
+   
+    .App {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

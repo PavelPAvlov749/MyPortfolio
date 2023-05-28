@@ -33,6 +33,7 @@ export const Contacts = () => {
             </section>
             <div className="planet">
                 <img src={planet} alt="" />
+                
             </div>
             {/* <YMap/> */}
 
