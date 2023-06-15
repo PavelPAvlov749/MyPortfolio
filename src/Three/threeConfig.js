@@ -6,12 +6,7 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 
 import { RGBShiftShader } from 'three/addons/shaders/RGBShiftShader.js';
 import { DotScreenShader } from 'three/addons/shaders/DotScreenShader.js';
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-import planet from "./earth.glb"
-import model from "./scene.gltf"
-import "./PlanetScene"
-console.log(model)
 //CONFIG WEB GL RENDERER
 
 //CREATING CANVAS
@@ -53,7 +48,6 @@ export const controls = new OrbitControls(camera, renderer.domElement);
 //EFFECT COMPOSER
 export const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, camera));
-
 export const effect1 = new ShaderPass(DotScreenShader);
 effect1.uniforms['scale'].value = 4;
 composer.addPass(effect1);
@@ -63,19 +57,20 @@ effect2.uniforms['amount'].value = 0.0005;
 composer.addPass(effect2);
 
 
+// SECOND SCENE FOR SMALLER DIPLAYS
+
+export let camera2 = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 ); 
+
+export let renderer2 = new THREE.WebGLRenderer(); 
+renderer2.setSize( window.innerWidth, window.innerHeight ); 
+export let scene2 = new THREE.Scene();  
+export const composer2 = new EffectComposer(renderer2)
+composer2.addPass(new RenderPass(scene2,camera2))
+composer2.addPass(effect1)
+composer2.addPass(effect2)
 
 
-const loader = new GLTFLoader();
-console.log(loader)
 
-loader.load( planet, function ( gltf ) {
-	console.log(gltf)
-	scene.add( gltf.scene );
 
-}, function (xhr) {
-	console.log("Loading : " + xhr.loaded)
-}, function ( error ) {
 
-	console.error( error );
 
-} );

@@ -5,7 +5,7 @@ import track01 from "../Assets/Sounds/track01.mp3"
 
 export const Navbar = () => {
     return (
-        <section class="navbar">
+        <section className="navbar">
         <ul>
             <li><a href="#mainPage">01.MainPage</a></li>
             <li><a href="#about">02.About</a></li>
@@ -30,29 +30,29 @@ export const MainPage = () => {
 
     return (
         <>
-            <section class="top_control_buttons">
-                <div class="name_logo">
+            <section className="top_control_buttons">
+                <div className="name_logo">
                     PVLV_DEV:
                 </div>
-                {/* <audio src={track01} autoplay={autoplay ? "on" : "off"} class="sound"></audio> */}
-                <img onClick={toggleAutoplayByClick} src={soundIcon} class="sound_button" alt=""/>
 
-                    <div class="language_switcher">en</div>
+                {/* <img onClick={toggleAutoplayByClick} src={soundIcon} className="sound_button" alt=""/> */}
 
-                    <button class="resume_button">
+                 
+
+                    <a className="resume_button" id="resume_button" href="https://drive.google.com/file/d/1C-NNPFq2fcS_KpYaCz0rlGpbQLv1biYD/view?usp=sharing">
                         Resume
-                    </button>
+                    </a>
             </section>
-            <section class="main_page" id="mainPage">
+            <section className="main_page" id="mainPage">
              
-                <section class="welcome">
+                <section className="welcome">
                     <h1>Welcome</h1>
                     <span>Hello! My name is Pavel</span><br />
                     <p>
-                        Resolving design problems, building smart user interfaces and useful interactions,
-                        developing rich web applications and seamless web experiences.
+                        Frontend development with React & Typescript, building smart user interfaces and useful interactions,
+                        developing web applications.
                     </p>
-                    <a href="#about" class="aboutButton">{"About >"}</a>
+                    <a href="#about" className="aboutButton">{"About >"}</a>
                 </section>
         
             </section>

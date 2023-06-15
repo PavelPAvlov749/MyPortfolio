@@ -15,18 +15,17 @@ export const Controls = () => {
     }
     return (
         <>
-            <section class="top_control_buttons">
-                <div class="name_logo">
+            <section className="top_control_buttons">
+                <div className="name_logo">
                     PVLV_DEV:
                 </div>
                 {/* <audio src={track01} autoplay={autoplay ? "on" : "off"} class="sound"></audio> */}
-                <img onClick={toggleAutoplayByClick} src={soundIcon} class="sound_button" alt="" />
+                <img onClick={toggleAutoplayByClick} src={soundIcon} className="sound_button" alt="" />
 
-                <div class="language_switcher">en</div>
-
-                <button class="resume_button">
+            
+                <a className="resume_button">
                     Resume
-                </button>
+                </a>
             </section>
         </>
     )

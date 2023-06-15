@@ -22,8 +22,11 @@ const optimization = () => {
             new CssMinimizerPlugin(),
             new TerserPlugin()
         ]
+        return config
+    } else{
+        return config
     }
-    return config
+   
 }
 
 

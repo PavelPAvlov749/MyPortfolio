@@ -22,8 +22,8 @@ export const Stack = () => {
         <div className="stack_container" id="stack">
             <section className="stack_text">
             <h1>Frontend Skills & Technologies</h1>
-            <p>HTML, CSS, JS, building small and medium web applications with Vue or React,  <br />
-                custom plugins, features, animations, and coding interactive layouts.
+            <p>HTML, CSS, JS, building small and medium web applications with React,  <br />
+             animations, and coding interactive layouts.
             </p>
             </section>
          
@@ -32,16 +32,16 @@ export const Stack = () => {
                     return (
                         <>
                             
-                            <img src={el} alt="" />
+                            <img key={index} src={el} alt="" />
                             
                         </>
                     )
                 })}
                 <br />
-                {icons_2.map((el) => {
+                {icons_2.map((el,index) => {
                     return (
                         <>
-                            <img src={el} alt="" />
+                            <img key={index} src={el} alt="" />
                         </>
                     )
                 })}

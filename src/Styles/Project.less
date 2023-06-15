@@ -1,19 +1,17 @@
 .projectExample {
-    
+
     min-width: 100%;
     max-width: 100%;
     min-height: 90%;
     max-height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'd p';
     color: white;
     .project_description{
-        padding: 10px;
-        width: 40%;
-        text-align: left;
+        height: 100%;
+        grid-area: d;
+
     }
     span{
         font-family: ostrich;
@@ -23,14 +21,21 @@
         font-family: bebas;
         font-size: 40px;
     }
+    .images_container{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
     .images {
-        padding: 10px;
-        width: 100%;
+        grid-area: p;   
+        display: flex;
         text-align: center;
-        width: auto;
+        height: 100%;
         img{
             height: 100%;
-            max-height: 400px;
+            max-height: 350px;
             width: auto;
         }
     }

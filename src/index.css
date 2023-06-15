@@ -1,9 +1,10 @@
 @font-face {
-    font-family:"fonts";
+    font-family: "fonts";
     src: url(./Fonts/clacon2.ttf);
     font-style: normal;
 
 }
+
 @font-face {
     font-family: "ostrich";
     src: url(./Fonts/ostrich-regular.ttf);
@@ -13,13 +14,29 @@
     font-family: "josephin";
     src: url(./Fonts/JosefinSans-Bold.ttf);
 }
+
 @font-face {
     font-family: "bebas";
     src: url("./Fonts/BebasNeue-Regular.ttf");
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
 canvas {
     grid-area: canvas;
     z-index: -1;
@@ -28,17 +45,18 @@ canvas {
     right: 0%;
 }
 
-.App{
+.App {
     display: grid;
     grid-template-columns: 1.8fr 8.5fr;
-    grid-template-areas: 
-    "navbar content";
+    grid-template-areas:
+        "navbar content";
 }
 
 
 @media (max-width : 706px) {
-   
+
     .App {
+        width: calc(100% - 20px);
         padding: 10px;
         display: flex;
         flex-direction: column;

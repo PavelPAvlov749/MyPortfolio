@@ -1,5 +1,6 @@
 import phone from "../Assets/project.png"
-import phone2 from "../Assets/project2.png"
+// import phone2 from "../Assets/project2.png"
+import BartendPrev from "../Assets/BartendPrev.png"
 
 export const projects = [{
     name: "NotInstagram",
@@ -10,11 +11,11 @@ export const projects = [{
     link: "https://pavelpavlov749.github.io/React-not_instagram/"
 },
 {
-    name: "BarApp",
+    name: "Bartend",
     shortDescription: "Bartenders work platform",
     fullDescription: "A platform designed to simplify the routine organizational tasks of bars.Train employees, facilitate work with technological maps.",
     stack: "React | Redux | less | Google-Cloud-Functions",
-    img: [phone2],
+    img: [BartendPrev],
     link: "https://pavelpavlov749.github.io/React-not_instagram/"
 }
 ]

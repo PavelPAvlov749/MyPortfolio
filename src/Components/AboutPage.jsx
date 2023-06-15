@@ -1,9 +1,23 @@
 import React from "react";
-import gitHubIcon from "../Assets/Icons/icons8-github-100.png"
 
 export const AboutPage = () => {
+    
     return (
         <div className="about_container" id="about">
+            {/* ANIMATION PARTICLES */}
+            <ul className="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
             <div className="short_description">
                 <h1>Hi,I'm Pavel
                     <br />
@@ -13,14 +27,12 @@ export const AboutPage = () => {
             </div>
             <div className="full_description">
                 <p>
-                    Professionally connected with the web development industry. <br />
-                    Problem solver, well-organised person, loyal employee with high attention to detail. <br />
-                    Fan of Boxing, outdoor activities, video games, and coding of course. <br />
-
-                    Interested in the entire frontend spectrum and working on ambitious projects with interesting people.
+                    Well-organised person, loyal employee with high attention to detail.
+                    Fan of Bass playing, outdoor activities,
+                    Linux, and coding of course.
+                    Interested in the entire frontend spectrum.
                 </p>
-                {/* <img src={gitHubIcon} alt="" />
-                <a href="https://github.com/PavelPAvlov749?tab=repositories">{"To my github >"}</a> */}
+        
             </div>
 
         </div>
