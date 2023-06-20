@@ -5,12 +5,13 @@ import { Stack } from "./Components/Stack";
 import { Projects } from "./Components/Projects";
 import { Contacts } from "./Components/Contacts";
 import { Controls } from "./Components/Controls";
+import { Header } from "./Components/Header";
 
 
 export const App = () => {
     return (
-        <div className="App">
-            {/* <Controls/> */}
+        <main className="App">
+            <Header/>
             <Navbar/>
             <div className="content">
             <MainPage></MainPage>
@@ -21,6 +22,6 @@ export const App = () => {
             </div>
         
        
-        </div>
+        </main>
     )
 }

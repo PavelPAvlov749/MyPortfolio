@@ -42,14 +42,17 @@ canvas {
     z-index: -1;
     position: absolute;
     top: 0%;
-    right: 0%;
+    left: 10%;
 }
 
 .App {
     display: grid;
-    grid-template-columns: 1.8fr 8.5fr;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 1fr 8fr;
     grid-template-areas:
-        "navbar content";
+        "header content"
+        "navbar content"
+        "canvas canvas";
 }
 
 

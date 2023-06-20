@@ -16,6 +16,6 @@ export const projects = [{
     fullDescription: "A platform designed to simplify the routine organizational tasks of bars.Train employees, facilitate work with technological maps.",
     stack: "React | Redux | less | Google-Cloud-Functions",
     img: [BartendPrev],
-    link: "https://pavelpavlov749.github.io/React-not_instagram/"
+    link: "https://pavelpavlov749.github.io/Bartend"
 }
 ]

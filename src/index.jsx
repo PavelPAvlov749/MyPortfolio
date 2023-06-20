@@ -9,6 +9,16 @@ import React from "react";
 import ReactDOM from 'react-dom/client';
 import { App } from "./App";
 
+const root = ReactDOM.createRoot(
+    document.getElementById('mainPage')
+)
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+)
+
+
 
 
 if (window.innerWidth < 550) {
@@ -110,8 +120,8 @@ export function AnimateGeometryParticles() {
     camera.position.x = Math.cos(angle) * radius;
     camera.position.y = Math.sin(angle) * radius;
     camera.position.z = Math.sin(angle) * radius;
-    angle += 0.04 * delta; // приращение угла
-    controls.update(0.2);
+    angle += 0.1 * delta; // приращение угла
+    controls.update(1);
     composer.render()
     }else{
 
@@ -139,14 +149,5 @@ if(innerWidth < 550) {
     body.appendChild(renderer.domElement);
 
 }
-// window.addEventListener("resize",onWindowResize)
-
-const root = ReactDOM.createRoot(
-    document.getElementById('mainPage')
-)
-root.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
-)
+window.addEventListener("resize",onWindowResize)
 
