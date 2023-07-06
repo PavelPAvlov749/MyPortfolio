@@ -4,7 +4,18 @@ export const AboutPage = () => {
 
     return (
         <section className="about_container" id="about">
-        
+                    <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 <h1 className="short_description">
                     Hi,I'm Pavel
                     <br />

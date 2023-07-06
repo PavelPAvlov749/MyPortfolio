@@ -15,18 +15,11 @@
         width: 50%;
         padding: 20px;
         font-size: 60px;
-        h2{
+
+        h2 {
             font-size: 30px;
         }
-        // background-color: red;
-        // display: flex;
-        // flex-direction: column;
-        // text-align: left;
-        // align-items: flex-start;
-        // justify-content: center;
-        // padding: 10px;
-        // height: 100%;
-        // font-size: 50px;
+
         font-family: bebas;
 
 
@@ -39,17 +32,8 @@
     }
 
     .full_description {
-        // background-color: blue;
-        // display: flex;
+
         width: 50%;
-        // height: 100%;
-        // width: auto;
-        // align-items: center;
-        // justify-content: center;
-        // word-wrap: break-word;
-        // word-break: keep-all;
-        // overflow-x: hidden;
-        // padding: 10px;
 
         img {
             vertical-align: middle;
@@ -67,6 +51,40 @@
         }
     }
 
+    // CIRKLES ANIMATION
+    .circles li:first-child {
+        animation-delay: 0s;
+        height: 80px;
+        left: 25%;
+        width: 80px;
+    }
+
+    .circles li {
+        animation: animate 25s linear infinite;
+        animation-delay: 0s;
+        background: rgba(0, 0, 0, .2);
+        border: 1px solid #fff;
+        bottom: -150px;
+        display: block;
+        height: 20px;
+        list-style: none;
+        position: absolute;
+        width: 20px;
+    }
+
+    @keyframes animate {
+        0% {
+            border-radius: 0;
+            opacity: 1;
+            transform: translateY(0) rotate(0deg);
+        }
+
+        100% {
+            border-radius: 40%;
+            opacity: 0;
+            transform: translateY(-1000px) rotate(2turn);
+        }
+    }
 }
 
 
@@ -84,8 +102,9 @@
         }
 
         .full_description {
-            align-items: flex-start;
-            justify-content: flex-start;
+            padding: 50px;
+            text-align: center;
+            width: calc(100% - 100px);
         }
 
     }
@@ -93,10 +112,6 @@
 
 }
 
-// #arrow {
-//     width: 200px;
-//     height: 200px;
-// }
 // ANIMATION PARTICLES
 
 .area {

@@ -36,7 +36,9 @@ html {
     scrollbar-width: none;
     /* Firefox */
 }
-
+a {
+    text-decoration: none;
+}
 canvas {
     grid-area: canvas;
     z-index: -1;
@@ -46,13 +48,13 @@ canvas {
 }
 
 .App {
+
     display: grid;
     grid-template-columns: 1fr 9fr;
-    grid-template-rows: 1fr 8fr;
+
     grid-template-areas:
         "header content"
-        "navbar content"
-        "canvas canvas";
+        "navbar content";
 }
 
 
@@ -64,5 +66,8 @@ canvas {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    canvas {
+        left: 0px;
     }
 }

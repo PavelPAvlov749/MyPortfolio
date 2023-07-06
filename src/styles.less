@@ -109,6 +109,16 @@ body {
 
     }
 
+    .aboutButtonArrow {
+        animation: blink 0.8s step-start infinite;
+
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
 
 }
 
@@ -158,51 +168,45 @@ body {
     .main_page {
 
         padding: 5px;
+        justify-content: center;
+        padding: 5px;
+        text-align: center;
 
-        // text-align: center;
-        // align-items: flex-end;
         .welcome {
-            // justify-content: space-around;
-            text-align: center;
             justify-content: center;
-            // padding-bottom: 3rem;
+            padding: 5px;
+            text-align: center;
 
 
-            // display: grid;
-            // grid-template-columns: 1fr;
-            // grid-template-rows: 2fr 5fr 2fr 2fr;
-            // grid-template-areas: 
-            // "h"
-            // "s"
-            // "p"
-            // "a";
-            h1 {
-                margin-top: 90%;
-                // margin:0%;
-                grid-area: h;
-                font-size: 35px;
+        }
 
-                // align-self: center;
-            }
+        h1 {
 
-            span {
-                font-size: 28px;
-                grid-area: s;
-            }
+            font-size: 35px;
+            margin-top: 90%;
+        }
 
-            p {
-                grid-area: p;
-                justify-self: flex-start;
-                align-self: center;
-                width: 100%;
-                font-size: 15px;
-            }
+        span {
+            font-size: 28px;
+            grid-area: s;
+        }
 
-            a {
-                grid-area: a;
-            }
+        p {
+            align-self: center;
+            font-size: 15px;
+            grid-area: p;
+            justify-self: flex-start;
+            width: 100%;
+        }
+
+        a {
+            color: orange;
+            cursor: pointer;
+            font-family: fonts;
+            font-size: xx-large;
         }
     }
+
 
 
 }

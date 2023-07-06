@@ -78,7 +78,26 @@
         font-family: bebas;
         font-size: 40px;
     }
-
+    .projects__links_list {
+        margin: 0%;
+        padding: 0%;
+        display: flex;
+        flex-direction: row;
+    }
+    .projects__links_list--list_item {
+        padding: 0%;
+        padding: 0 20px 0 0;
+    }
+    .projects__links_list--list_item a {
+        color: white;
+        font-family: fonts;
+        font-size: medium;
+        margin-left: 10px;
+    }
+    .projects__links_list--list_item a:hover {
+        color: orangered;
+        
+    }
     .gitIcon {
         display: inline;
         width: 40px;
@@ -86,12 +105,9 @@
         vertical-align: middle;
         border-radius: 180px;
         transition: all ease;
+        z-index:4;  
+    }
 
-    }
-    .gitIcon:hover {
-        box-shadow: 1px 1px 10px 1px white;
-        transition: box-shadow all ease;
-    }
 }
 
 @media (max-width : 550px) {
@@ -102,6 +118,14 @@
     .slider {
         margin: 0%;
         width: 100%;
+        .dots {
+            padding: 0%;
+            
+            align-self: center;
+            li {
+                margin: 20px 10px 0 10px;
+            }
+        }
     }
     .single_project_container {
         text-align: center;
@@ -112,6 +136,9 @@
                 margin: 0%;
             }
         }
+        .projects__links_list{
+            justify-content: space-between;
+        }
         .photos {
             width: 100%;
             justify-content: center;
@@ -120,4 +147,6 @@
             }
         }
     }
+   
+    
 }

@@ -24,7 +24,7 @@ root.render(
 if (window.innerWidth < 550) {
     let size = 70
     let z = 0
-    let y = 10
+    let y = 0
     let x = 0
     const cube = new THREE.BoxGeometry(size, size, size, size, size, size)
     const cubeMAterial = new THREE.MeshLambertMaterial({ color: 0x34c4a4 })

@@ -14,10 +14,10 @@ export const Contacts = () => {
             <h2>Russian Federation,Omsk</h2>
             <div className="contact_list">
             <img src={phoneIcon} alt="" />
-            <span>Tel : +79658751073</span>
+            <a href="tel:+79658751073">NUMBER : +79658751073</a>
             <br />
             <img src={mailIcon} alt="" />
-            <span>Mail : unklefraid@gmail.com</span>
+            <a href="mailto:unklefraid@gmail.com">Mail : unklefraid@gmail.com</a>
             <br />
             <img src={telegram} alt="" />
             <span>Telegram : +79658751073</span>
