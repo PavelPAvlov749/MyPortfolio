@@ -1,4 +1,4 @@
-import { camera,camera2, composer, composer2, effect1, effect2, renderer2, scene, scene2 } from "./Three/threeConfig";
+import { camera, camera2, composer, composer2, effect1, effect2, renderer2, scene, scene2 } from "./Three/threeConfig";
 import { renderer } from "./Three/threeConfig";
 import "./index.css"
 import "./styles.less"
@@ -22,7 +22,7 @@ root.render(
 
 
 if (window.innerWidth < 550) {
-    let size = 70
+    let size = 20
     let z = 0
     let y = 0
     let x = 0
@@ -33,7 +33,8 @@ if (window.innerWidth < 550) {
     figure.rotation.z = Math.random() * 90
     figure.rotation.x = Math.random() * 90
     figure.rotation.y = Math.random() * 90
- 
+    
+
 } else {
 
 
@@ -89,13 +90,11 @@ let clock = new THREE.Clock()
 let angle = 0
 //SCENE 2 
 
-
-
-var geometry = new THREE.BoxGeometry( 2, 2, 2 );
-var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-var cube = new THREE.Mesh( geometry, material );
-cube.position.set(0,1.2,0)
-scene2.add( cube );
+var geometry = new THREE.BoxGeometry(2, 2, 2);
+var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+var cube = new THREE.Mesh(geometry, material);
+cube.position.set(0, 1.2, 0)
+scene2.add(cube);
 
 camera2.position.z = 5;
 
@@ -115,24 +114,24 @@ export function AnimateGeometryParticles() {
         effect1.uniforms['scale'].value = 4;
         effect2.uniforms['amount'].value = 0.0005;
     }
-    if(window.innerWidth > 550) {
-         // CAMERA ROTATION
-    camera.position.x = Math.cos(angle) * radius;
-    camera.position.y = Math.sin(angle) * radius;
-    camera.position.z = Math.sin(angle) * radius;
-    angle += 0.1 * delta; // приращение угла
-    controls.update(1);
-    composer.render()
-    }else{
+    if (window.innerWidth > 550) {
+        // CAMERA ROTATION
+        camera.position.x = Math.cos(angle) * radius;
+        camera.position.y = Math.sin(angle) * radius;
+        camera.position.z = Math.sin(angle) * radius;
+        angle += 0.1 * delta; // приращение угла
+        controls.update(1);
+        composer.render()
+    } else {
 
-    cube.rotation.x += 0.02;
-    cube.rotation.y += 0.02;
+        cube.rotation.x += 0.02;
+        cube.rotation.y += 0.02;
 
-    controls.update(0.2);
-    composer2.render()
+        controls.update(0.2);
+        composer2.render()
 
     }
-   
+
 }
 
 
@@ -142,12 +141,12 @@ AnimateGeometryParticles()
 
 // sceneContainer.appendChild(renderer.domElement)
 const body = document.body
-if(innerWidth < 550) {  
-    body.appendChild( renderer2.domElement );
+if (innerWidth < 550) {
+    body.appendChild(renderer2.domElement);
 
-}else{
+} else {
     body.appendChild(renderer.domElement);
 
 }
-window.addEventListener("resize",onWindowResize)
+window.addEventListener("resize", onWindowResize)
 

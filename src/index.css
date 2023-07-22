@@ -57,7 +57,9 @@ canvas {
         "navbar content";
 }
 
-
+body {
+    background-color: red;
+}
 @media (max-width : 706px) {
 
     .App {
@@ -66,8 +68,10 @@ canvas {
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow-x: hidden;
     }
     canvas {
+        
         left: 0px;
     }
 }

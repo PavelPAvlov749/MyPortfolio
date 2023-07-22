@@ -42,6 +42,7 @@
     "react-router-dom": "^6.11.2",
     "react-script": "^2.0.5",
     "seinjs-gltf-loader": "^0.9.28",
+    "swiper": "^10.0.4",
     "three": "^0.151.3"
   }
 }

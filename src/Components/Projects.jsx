@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import "../Styles/Projects.less"
 import { projects } from "../Model/ProjectsModel";
-import { ProjectExample } from "./ProjectDescription";
 import gitIcon from "../Assets/Icons/icons8-github-100.png"
 import AppIcon from "../Assets/Icons/icons8-web-96.png"
 
+  
 export const SingleProject = (props) => {
     const pictureRef = useRef()
 
@@ -67,8 +67,12 @@ export const Projects = () => {
         }
     }
     return (
-        <section className="projects_page_container"  onTouchStart={handleTouchStart} handleTouchMove={handleTouchMove} handleTouchEnd={handleTouchEnd} >
+        <section className="projects_page_container" onTouchStart={handleTouchStart} handleTouchMove={handleTouchMove} handleTouchEnd={handleTouchEnd} >
+
+
+
             <div className="slider" ref={galeryRef}  >
+       
                 <div className="slider_line" style={{ transform: `translateX(-${offset}px)` }}>
                     {projects.map((el, index) => <SingleProject key={index} props={el} offset={offset} />)}
                 </div>
