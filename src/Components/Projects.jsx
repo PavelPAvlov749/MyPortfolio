@@ -3,8 +3,15 @@ import "../Styles/Projects.less"
 import { projects } from "../Model/ProjectsModel";
 import gitIcon from "../Assets/Icons/icons8-github-100.png"
 import AppIcon from "../Assets/Icons/icons8-web-96.png"
+// SWIPER IMPORTS
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-  
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 export const SingleProject = (props) => {
     const pictureRef = useRef()
 
@@ -22,12 +29,12 @@ export const SingleProject = (props) => {
                 </p>
                 <ul className="projects__links_list">
                     <ul className="projects__links_list--list_item">
-                        <img src={gitIcon} className="gitIcon" alt="" />
+                       
                         <a className="git_icon_link" href={props.props.gitLink}>GitHub </a>
                     </ul>
                     <ul className="projects__links_list--list_item">
-                        <img src={AppIcon} className="gitIcon" alt="" />
-                        <a className="git_icon_link" href={props.props.link}>Visit App </a>
+                      
+                        <a className="app_link" href={props.props.link}>Visit App </a>
                     </ul>
                 </ul>
 
@@ -68,10 +75,25 @@ export const Projects = () => {
     }
     return (
         <section className="projects_page_container" onTouchStart={handleTouchStart} handleTouchMove={handleTouchMove} handleTouchEnd={handleTouchEnd} >
+            <Swiper
+                // install Swiper modules
+                spaceBetween={1}
+                slidesPerView={"auto"}
+                
+                // pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={() => console.log('slide change')}
+            >
+                {projects.map((el, index) => {
+                    return <SwiperSlide>
+                        <SingleProject key={index} props={el} />
+                    </SwiperSlide>
+                })}
+            </Swiper>
 
 
-
-            <div className="slider" ref={galeryRef}  >
+            {/* <div className="slider" ref={galeryRef}  >
        
                 <div className="slider_line" style={{ transform: `translateX(-${offset}px)` }}>
                     {projects.map((el, index) => <SingleProject key={index} props={el} offset={offset} />)}
@@ -81,7 +103,7 @@ export const Projects = () => {
                     <li className="item" onClick={() => { setOffset(galeryRef.current.offsetWidth) }} ></li>
 
                 </ul>
-            </div>
+            </div> */}
 
 
         </section>

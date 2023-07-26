@@ -14,7 +14,6 @@ export const ProjectExample = (props) => {
             <p>
                 {props.props.fullDescription}
             </p>
-            <img src={gitIcon} className="gitIcon" alt="" />
             <a href={props.props.link}>GitHub {">"}</a>
         </section>
       
